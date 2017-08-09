@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Foliac</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<header>
+    <div class="header-menuRow">
+        <div class="header-menuRow-logo"></div>
+        <div class="header-menuRow-menuButton"></div>
+        <div class="header-menuRow-menuButton"></div>
+        <div class="header-menuRow-menuButton">
+            <a href="#">Accueil</a>
+        </div>
+        <div class="header-menuRow-menuButton">
+            <a href="#portfolio">Portfolio</a>
+        </div>
+        <div class="header-menuRow-menuButton">
+            <a href="#about">About</a>
+        </div>
+        <div class="header-menuRow-menuButton">
+            <a href="#contact">Contact</a>
+        </div>
+
+    </div>
+    <div class="header-titleRow">
+        <h1>voici votre prochain portfolio</h1>
+        <h2>un template psd simple et gratuit</h2>
+        <button onclick="scrollTo(0, 500)">MES TRAVAUX</button>
+    </div>
+
+</header>
+<main>
+
+    <section class="main-portfolio" id="portfolio">
+        <div class="button-group filters-button-group" >
+            <button class="button is-checked" data-filter="*">Tous les projets</button>
+            <button class="button" data-filter=".webdesign">Webdesign</button>
+            <button class="button" data-filter=".uiUx">UI/UX design</button>
+            <button class="button" data-filter=".illustration">Illustration</button>
+            <button class="button" data-filter=".motion">Motion design</button>
+            <button class="button" data-filter=".hideall">Hide all</button>
+        </div>
+
+        <div class="grid">
+            <div class="grid-item grid-item--width2 grid-item--height2 element-item uiUx " data-category="uiUx">
+                <img src="img/item01.jpg" alt="" class="uiUx">
+            </div>
+            <div class="grid-item element-item webdesign " data-category="webdesign">
+                <img src="img/item02.jpg" alt="" class="webdesign">
+            </div>
+            <div class="grid-item--height2 grid-item element-item uiUx " data-category="uiUx">
+                <img src="img/item03.jpg" alt="" class="uiUx">
+            </div>
+            <div class="grid-item--width2 grid-item element-item uiUx " data-category="uiUx">
+                <img src="img/item04.jpg" alt="" class="uiUx">
+            </div>
+            <div class="grid-item element-item webdesign " data-category="webdesign">
+                <img src="img/item05.jpg" alt="" class="webdesign">
+            </div>
+            <div class="grid-item--height2 grid-item element-item illustration " data-category="illustration">
+                <img src="img/item06.jpg" alt="" class="illustration">
+            </div>
+            <div class="grid-item element-item motion " data-category="motion">
+                <img src="img/item07.gif" alt="" class="motion">
+            </div>
+            <div class="grid-item--width2 grid-item element-item motion " data-category="motion">
+                <img src="img/item08.gif" alt="" class="motion">
+            </div>
+            <div class="grid-item--width2 grid-item--height2 grid-item element-item motion " data-category="motion">
+                <img src="img/item09.gif" alt="" class="motion">
+            </div>
+            <div class="grid-item element-item motion " data-category="motion">
+                <img src="img/item10.gif" alt="" class="motion illustration">
+            </div>
+            <div class="grid-item element-item webdesign " data-category="webdesign">
+                <img src="img/item11.jpg" alt="" class="webdesign">
+            </div>
+            <div class="grid-item--width2 grid-item element-item webdesign " data-category="webdesign">
+                <img src="img/item12.jpg" alt="" class="webdesign">
+            </div>
+            <div class="grid-item element-item uiUx " data-category="uiUx">
+                <img src="img/item13.jpg" alt="" class="uiUx">
+            </div>
+            <div class="grid-item element-item lanthanoid illustration " data-category="illustration">
+                <img src="img/item14.jpg" alt="" class="illustration">
+            </div>
+            <div class="grid-item element-item uiUx " data-category="uiUx">
+                <img src="img/item15.jpg" alt="" class="uiUx">
+            </div>
+            <div class="grid-item element-item webdesign " data-category="webdesign">
+                <img src="img/item16.jpg" alt="" class="webdesign">
+            </div>
+        </div>
+    </section>
+    <section class="main-about" id="about">
+        <div class="main-about-infoAbout"></div>
+        <div class="main-about-infoAbout">
+            <h2>Michel Dupont</h2>
+            <h3>Webdesigner, illustrateur, auteur</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <button>ME CONTACTER</button>
+        </div>
+    </section>
+    <section class="main-contact" id="contact">
+        <h3>ME CONTACTER
+        </h3>
+        <form>
+            <label for="contact">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                    <path d="M21.798,21.429 C21.568,21.786 21.178,22.000 20.755,22.000 L1.245,22.000 C0.822,22.000 0.432,21.786 0.202,21.429 C-0.029,21.071 -0.064,20.624 0.108,20.234 L2.596,14.575 C2.710,14.316 2.910,14.102 3.159,13.971 L7.021,11.941 C7.106,11.896 7.209,11.905 7.286,11.964 C8.378,12.798 9.662,13.239 11.000,13.239 C12.337,13.239 13.622,12.798 14.714,11.964 C14.791,11.905 14.894,11.896 14.979,11.941 L18.841,13.971 C19.090,14.102 19.290,14.316 19.404,14.575 L21.892,20.234 C22.064,20.624 22.028,21.071 21.798,21.429 ZM11.000,11.656 C8.276,11.656 6.067,9.047 6.067,5.828 C6.067,1.364 8.276,-0.000 11.000,-0.000 C13.724,-0.000 15.933,1.364 15.933,5.828 C15.933,9.047 13.724,11.656 11.000,11.656 Z" class="cls-1"></path>
+                </svg>
+
+                <input type="text" maxlength="20" placeholder="Votre nom">
+                <input type="email" maxlength="20" placeholder="Votre email">
+                <textarea maxlength="140" placeholder="Votre message"></textarea>
+                <button>ENVOVER</button>
+            </label>
+
+        </form>
+    </section>
+</main>
+
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>-->
+<script src="script/jquery.js"></script>
+<script src="//npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
+
+<script src="script/main.js"></script>
+</body>
+</html>

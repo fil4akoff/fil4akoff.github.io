@@ -1,0 +1,347 @@
+@import url(item-masonry.css);
+@font-face {
+  font-family: 'big_johnregular';
+  src: url("../fonts/big_john-webfont.woff2") format("woff2"), url("../fonts/big_john-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'latobold';
+  src: url("../fonts/lato-bold-webfont.woff2") format("woff2"), url("../fonts/lato-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'latoregular';
+  src: url("../fonts/lato-regular-webfont.woff2") format("woff2"), url("../fonts/lato-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'slim_joeregular';
+  src: url("../fonts/slim_joe-webfont.woff2") format("woff2"), url("../fonts/slim_joe-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+/*foliac color*/
+html,
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #f9f9f9; }
+
+header {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 80vh;
+  background: #3c4955 url("../img/header.jpg") center no-repeat;
+  background-size: cover; }
+  header .header-menuRow {
+    margin: 0 auto;
+    height: 100px;
+    width: 80%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center; }
+    header .header-menuRow .header-menuRow-logo {
+      height: 100%;
+      width: 12%;
+      top: 0;
+      left: 0;
+      background: url("../img/logo.png") no-repeat center;
+      background-size: contain; }
+    header .header-menuRow .header-menuRow-menuButton {
+      width: 10%;
+      display: block;
+      position: relative;
+      text-align: center;
+      padding: .5%;
+      transform: skewX(-18deg); }
+      header .header-menuRow .header-menuRow-menuButton:nth-of-type(4):after, header .header-menuRow .header-menuRow-menuButton:nth-of-type(5):after, header .header-menuRow .header-menuRow-menuButton:nth-of-type(6):after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: -20%;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: 18px;
+        height: 18px;
+        border: 1px solid #bfc8d1;
+        color: #f9f9f9;
+        opacity: .3; }
+      header .header-menuRow .header-menuRow-menuButton:hover {
+        background-color: #48bf72; }
+      header .header-menuRow .header-menuRow-menuButton a {
+        display: block;
+        color: #f9f9f9;
+        text-decoration: none;
+        font-family: "Lato Bold", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        transform: skewX(18deg); }
+  header .header-titleRow {
+    text-align: center;
+    text-transform: uppercase;
+    color: #f9f9f9;
+    width: 100%;
+    height: calc(80vh - 100px);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center; }
+    header .header-titleRow h1 {
+      font-family: "Big John", sans-serif;
+      font-size: 40px;
+      margin: 15px 0; }
+    header .header-titleRow h2 {
+      margin: 15px 0;
+      font-family: "Slim Joe", sans-serif;
+      font-weight: 300;
+      font-size: 28px; }
+    header .header-titleRow button {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      font-family: "Lato Bold", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 36px;
+      height: 40px;
+      width: 140px;
+      margin: 30px 0;
+      background: none;
+      color: #48bf72;
+      border: 2px solid #48bf72;
+      border-radius: 3px;
+      cursor: pointer; }
+      header .header-titleRow button:focus {
+        outline: none; }
+      header .header-titleRow button:hover {
+        background: rgba(72, 191, 114, 0.1); }
+      header .header-titleRow button:active {
+        background: #48bf72;
+        transition: all ease .1s;
+        color: #3c4955; }
+
+main .main-portfolio {
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 80%;
+  min-height: 50vh;
+  text-align: center; }
+  main .main-portfolio .button {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0 30px;
+    margin: 50px 0;
+    background: #eaeaea;
+    border: none;
+    border-radius: 3px;
+    color: #3c4955;
+    font-family: "Lato Bold", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    cursor: pointer; }
+    main .main-portfolio .button:hover {
+      background: #dfdfdf; }
+    main .main-portfolio .button:focus, main .main-portfolio .button:active, main .main-portfolio .button.button.is-checked {
+      background-color: #48bf72;
+      color: white;
+      outline: none; }
+  main .main-portfolio .grid {
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center; }
+    main .main-portfolio .grid:after {
+      content: '';
+      display: block;
+      clear: both; }
+    main .main-portfolio .grid .element-item {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 150px;
+      height: 150px;
+      border-radius: 5px;
+      margin: 5px;
+      overflow: hidden; }
+      main .main-portfolio .grid .element-item img {
+        width: 100%; }
+      main .main-portfolio .grid .element-item > * {
+        margin: 0;
+        padding: 0; }
+    main .main-portfolio .grid .grid-item--width2 {
+      width: 350px; }
+    main .main-portfolio .grid .grid-item--height2 {
+      height: 310px; }
+main .main-about {
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: url("../img/dude.jpg") fixed bottom no-repeat;
+  background-size: cover;
+  height: 70vh;
+  text-align: center;
+  overflow: auto; }
+  main .main-about .main-about-infoAbout {
+    width: 49%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: left; }
+    main .main-about .main-about-infoAbout h2 {
+      color: #f9f9f9;
+      font-family: "Lato Bold", sans-serif;
+      font-weight: 700;
+      font-size: 30px;
+      margin: 11% 0 0; }
+    main .main-about .main-about-infoAbout h3 {
+      color: #f9f9f9;
+      font-family: "Lato Regular", sans-serif;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 32px;
+      margin: 0; }
+    main .main-about .main-about-infoAbout p {
+      color: #f9f9f9;
+      font-family: "Lato Regular", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      width: 66.67%;
+      line-height: 25px; }
+    main .main-about .main-about-infoAbout button {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      font-family: "Lato Bold", sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      text-align: center;
+      line-height: 36px;
+      height: 40px;
+      width: 140px;
+      margin: 30px 0;
+      background: none;
+      color: #3c4955;
+      border: 2px solid #3c4955;
+      border-radius: 3px;
+      cursor: pointer; }
+      main .main-about .main-about-infoAbout button:focus {
+        outline: none; }
+      main .main-about .main-about-infoAbout button:hover {
+        color: #f9f9f9;
+        border-color: #f9f9f9;
+        background: rgba(63, 63, 64, 0.1); }
+      main .main-about .main-about-infoAbout button:active {
+        background: #3c4955;
+        transition: all ease .1s;
+        color: #e0e0e0;
+        border-color: #e0e0e0;
+        background: rgba(170, 170, 173, 0.1); }
+main .main-contact {
+  width: 100%;
+  height: 80vh; }
+  main .main-contact h3 {
+    text-align: center;
+    font-family: "Big John", sans-serif;
+    color: #48bf72;
+    font-size: 26px; }
+  main .main-contact form {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 60%;
+    margin: 0 auto; }
+    main .main-contact form label {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      position: relative; }
+      main .main-contact form label svg {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        position: absolute;
+        display: block;
+        top: 25px;
+        left: 25px;
+        z-index: 2;
+        fill: #fff;
+        fill-rule: evenodd; }
+      main .main-contact form label input {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        height: 50px;
+        width: 43%;
+        margin: 15px;
+        padding-left: 70px;
+        font-family: "Lato Bold", sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        color: #3c4955;
+        background: #f9f9f9;
+        border: 2px solid #3c4955;
+        border-radius: 4px;
+        position: relative; }
+        main .main-contact form label input:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          width: 50px;
+          height: 50px;
+          background: #3c4955;
+          margin: auto; }
+        main .main-contact form label input::placeholder {
+          font-family: "Lato Bold", sans-serif;
+          font-weight: 700;
+          font-size: 16px;
+          color: #a6a5a5; }
+        main .main-contact form label input:focus {
+          outline: none; }
+        main .main-contact form label input:before {
+          content: url("../img/user.svg");
+          display: block;
+          width: 20px;
+          height: 20px;
+          background-color: #3c4955; }
+      main .main-contact form label textarea {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: calc(86% + 30px);
+        height: 225px;
+        resize: none;
+        margin: 15px;
+        padding-left: 70px;
+        font-family: "Lato Bold", sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        color: #3c4955;
+        background: #f9f9f9;
+        border: 2px solid #3c4955;
+        border-radius: 4px; }
+        main .main-contact form label textarea::placeholder {
+          font-family: "Lato Bold", sans-serif;
+          font-weight: 700;
+          font-size: 16px;
+          color: #a6a5a5; }
+        main .main-contact form label textarea:focus {
+          outline: none; }
+
+/*# sourceMappingURL=main.css.map */
