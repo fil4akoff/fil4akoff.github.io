@@ -251,8 +251,9 @@ main .main-about {
         background: rgba(170, 170, 173, 0.1); }
 main .main-contact {
   width: 100%;
-  height: 80vh; }
+  min-height: 50vh; }
   main .main-contact h3 {
+    margin: 40px 0;
     text-align: center;
     font-family: "Big John", sans-serif;
     color: #48bf72;
@@ -262,30 +263,51 @@ main .main-contact {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 60%;
-    margin: 0 auto; }
-    main .main-contact form label {
+    margin: 0 auto;
+    position: relative; }
+    main .main-contact form .main-contact-input {
+      position: relative;
+      display: inline-block;
+      width: 49%;
+      padding: 7px;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      position: relative; }
-      main .main-contact form label svg {
+      box-sizing: border-box; }
+      main .main-contact form .main-contact-input:last-of-type {
+        width: 100%; }
+      main .main-contact form .main-contact-input:before {
+        content: '';
+        display: inline;
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        width: 50px;
+        height: 50px;
+        background: #3c4955;
+        z-index: 1;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 2px solid #3c4955;
+        border-radius: 4px;
+        border-right: none; }
+      main .main-contact form .main-contact-input svg {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         position: absolute;
         display: block;
-        top: 25px;
-        left: 25px;
-        z-index: 2;
-        fill: #fff;
-        fill-rule: evenodd; }
-      main .main-contact form label input {
+        fill: #ffffff;
+        fill-rule: evenodd;
+        top: 22px;
+        left: 21px;
+        z-index: 2; }
+      main .main-contact form .main-contact-input input {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         height: 50px;
-        width: 43%;
-        margin: 15px;
+        width: 100%;
         padding-left: 70px;
         font-family: "Lato Bold", sans-serif;
         font-weight: 700;
@@ -294,54 +316,82 @@ main .main-contact {
         background: #f9f9f9;
         border: 2px solid #3c4955;
         border-radius: 4px;
-        position: relative; }
-        main .main-contact form label input:before {
-          content: '';
-          display: block;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          right: 0;
-          left: 0;
-          width: 50px;
-          height: 50px;
-          background: #3c4955;
-          margin: auto; }
-        main .main-contact form label input::placeholder {
+        display: inline; }
+        main .main-contact form .main-contact-input input::placeholder {
           font-family: "Lato Bold", sans-serif;
           font-weight: 700;
           font-size: 16px;
           color: #a6a5a5; }
-        main .main-contact form label input:focus {
+        main .main-contact form .main-contact-input input:focus {
           outline: none; }
-        main .main-contact form label input:before {
-          content: url("../img/user.svg");
-          display: block;
-          width: 20px;
-          height: 20px;
-          background-color: #3c4955; }
-      main .main-contact form label textarea {
+      main .main-contact form .main-contact-input textarea {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        width: calc(86% + 30px);
+        width: 98.5%;
         height: 225px;
         resize: none;
-        margin: 15px;
-        padding-left: 70px;
-        font-family: "Lato Bold", sans-serif;
+        margin: 0;
+        padding: 15px 20px;
+        font-family: "Lato", sans-serif;
         font-weight: 700;
         font-size: 18px;
         color: #3c4955;
         background: #f9f9f9;
         border: 2px solid #3c4955;
+        border-left: 50px solid #3c4955;
         border-radius: 4px; }
-        main .main-contact form label textarea::placeholder {
+        main .main-contact form .main-contact-input textarea::placeholder {
           font-family: "Lato Bold", sans-serif;
           font-weight: 700;
           font-size: 16px;
           color: #a6a5a5; }
-        main .main-contact form label textarea:focus {
+        main .main-contact form .main-contact-input textarea:focus {
           outline: none; }
+    main .main-contact form button {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      height: 50px;
+      width: 97%;
+      margin: 0 7px;
+      background: #48bf72;
+      color: #f9f9f9;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 10px;
+      border: none;
+      cursor: pointer; }
+      main .main-contact form button:focus {
+        outline: none; }
+      main .main-contact form button:active {
+        background: none;
+        color: #48bf72;
+        border: 2px solid #48bf72;
+        transition: all ease .3s; }
+
+footer {
+  height: 200px;
+  background: #3c4955;
+  color: #f9f9f9;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  padding: 0 20%; }
+  footer p {
+    float: left;
+    margin-top: 90px; }
+    footer p a {
+      color: #f9f9f9;
+      text-decoration: none;
+      font-weight: 700; }
+      footer p a:visited {
+        color: inherit; }
+  footer .social {
+    margin-top: 70px;
+    float: right; }
+    footer .social a {
+      margin: 20px; }
 
 /*# sourceMappingURL=main.css.map */
