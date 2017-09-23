@@ -1,0 +1,94 @@
+@keyframes smaller {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.trail { /* className for the trail elements */
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: rgba(55, 55, 55, .3);
+
+
+    /*transition: .2s linear;*/
+}
+
+.trail > *,
+.trainl1 > *{
+    animation: smaller 1s ease-in;
+    animation-delay: 1s;
+}
+
+
+.trail1 { /* className for the trail elements */
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: rgba(55, 55, 55, .5);
+    transform: rotate(-45deg);
+
+    /*transition: 1s ease-out;*/
+}
+
+.trail:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 20px;
+    top: 10px;
+    z-index: 2;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .1);
+    /*transition: all 1s linear;*/
+}
+
+.trail:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 3;
+    right: -10px;
+    bottom: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .3);
+}
+
+.trail1:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: -20px;
+    top: -10px;
+    z-index: 2;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    /*transition: all 1s linear;*/
+}
+
+.trail1:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 3;
+    right: 10px;
+    bottom: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .3);
+}

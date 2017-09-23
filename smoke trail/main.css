@@ -1,0 +1,158 @@
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+html,
+body {
+    background: #2a2a2a;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    cursor: url("img/roc1.png"), auto;
+}
+
+#pew {
+    /*display: none;*/
+    width: 30px;
+    height: 30px;
+    background: yellowgreen;
+}
+
+
+.trail {
+
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    /*background: #bababa;*/
+    background: linear-gradient(to top, rgba(186, 186, 186, .04), transparent);
+    transition: .01s ease-out;
+
+}
+
+.trail > *,
+.trail1 > *,
+.trail2 > * {
+    animation: disappear 1s linear infinite;
+    /*animation-delay:;*/
+}
+
+
+.trail1 {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    /*background: #bababa;*/
+    background: linear-gradient(to top, rgba(186, 186, 186, .04), transparent);
+    transform: rotate(-45deg);
+
+}
+
+.trail:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: -5px;
+    top: -5px;
+    z-index: 2;
+    border-radius: 50%;
+    /*background: #bababa;*/
+    background: linear-gradient(to top, rgba(186, 186, 186, .04), transparent);
+
+}
+
+.trail:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 3;
+    right: -10px;
+    bottom: -2px;
+    top: -5px;
+    border-radius: 50%;
+    /*background: #bababa;*/
+    background: linear-gradient(to top, rgba(186, 186, 186, .04), transparent);
+
+}
+
+.trail1:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: -5px;
+    top: -5px;
+    z-index: 2;
+    border-radius: 50%;
+    /*background: #bababa;*/
+    background: linear-gradient(to top, rgba(186, 186, 186, .04), transparent);
+
+
+}
+
+.trail1:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    z-index: 3;
+    right: 10px;
+    bottom: -2px;
+    top: -5px;
+    border-radius: 50%;
+    /*background: #bababa;*/
+    background: linear-gradient(to top, rgba(186, 186, 186, .04), transparent);
+
+}
+
+.trail2 {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    /*background: #bababa;*/
+    background: linear-gradient(to top, rgba(186, 186, 186, .04), transparent);
+    transform: rotate(45deg);
+
+}
+
+.trail2:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: -5px;
+    top: -5px;
+    z-index: 2;
+    border-radius: 50%;
+    /*background: #bababa;*/
+    background: linear-gradient(to top, rgba(186, 186, 186, .04), transparent);
+
+
+}
+
+.trail2:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    z-index: 3;
+    right: 10px;
+    bottom: -2px;
+    top: -5px;
+    border-radius: 50%;
+    /*background: #bababa;*/
+    background: linear-gradient(to top, rgba(186, 186, 186, .04), transparent);
+
+}
