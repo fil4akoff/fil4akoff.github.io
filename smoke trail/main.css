@@ -33,7 +33,7 @@ body {
     width: 30px;
     border-radius: 50%;
     /*background: #bababa;*/
-    background: linear-gradient(to top, rgba(186, 186, 186, .04), transparent);
+    background: linear-gradient(35deg, rgba(186, 186, 186, .04), transparent);
     transition: .01s ease-out;
 
 }
@@ -48,11 +48,11 @@ body {
 
 .trail1 {
     position: absolute;
-    height: 20px;
-    width: 20px;
+    height: 10px;
+    width: 10px;
     border-radius: 50%;
     /*background: #bababa;*/
-    background: linear-gradient(to top, rgba(186, 186, 186, .04), transparent);
+    background: linear-gradient(35deg, rgba(186, 186, 186, .04), transparent);
     transform: rotate(-45deg);
 
 }
@@ -67,7 +67,7 @@ body {
     z-index: 2;
     border-radius: 50%;
     /*background: #bababa;*/
-    background: linear-gradient(to top, rgba(186, 186, 186, .04), transparent);
+    background: linear-gradient(35deg, rgba(186, 186, 186, .04), transparent);
 
 }
 
@@ -82,7 +82,7 @@ body {
     top: -5px;
     border-radius: 50%;
     /*background: #bababa;*/
-    background: linear-gradient(to top, rgba(186, 186, 186, .04), transparent);
+    background: linear-gradient(35deg, rgba(186, 186, 186, .04), transparent);
 
 }
 
@@ -96,7 +96,7 @@ body {
     z-index: 2;
     border-radius: 50%;
     /*background: #bababa;*/
-    background: linear-gradient(to top, rgba(186, 186, 186, .04), transparent);
+    background: linear-gradient(35deg, rgba(186, 186, 186, .04), transparent);
 
 
 }
@@ -112,7 +112,7 @@ body {
     top: -5px;
     border-radius: 50%;
     /*background: #bababa;*/
-    background: linear-gradient(to top, rgba(186, 186, 186, .04), transparent);
+    background: linear-gradient(35deg, rgba(186, 186, 186, .04), transparent);
 
 }
 
@@ -122,7 +122,7 @@ body {
     width: 20px;
     border-radius: 50%;
     /*background: #bababa;*/
-    background: linear-gradient(to top, rgba(186, 186, 186, .04), transparent);
+    background: linear-gradient(35deg, rgba(186, 186, 186, .04), transparent);
     transform: rotate(45deg);
 
 }
@@ -137,7 +137,7 @@ body {
     z-index: 2;
     border-radius: 50%;
     /*background: #bababa;*/
-    background: linear-gradient(to top, rgba(186, 186, 186, .04), transparent);
+    background: linear-gradient(35deg, rgba(186, 186, 186, .04), transparent);
 
 
 }
@@ -153,6 +153,6 @@ body {
     top: -5px;
     border-radius: 50%;
     /*background: #bababa;*/
-    background: linear-gradient(to top, rgba(186, 186, 186, .04), transparent);
+    background: linear-gradient(35deg, rgba(186, 186, 186, .04), transparent);
 
 }
