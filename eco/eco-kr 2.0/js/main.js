@@ -104,4 +104,22 @@
     });
     });
 
+    // ----------------------------------------------- GOOGLE MAP
+
+    $(function () {
+        var map,
+            point = {lat: 48.6157917, lng: 37.8921612},
+        map = new google.maps.Map(document.getElementById('googleMap'), {
+            center: point,
+            zoom: 12,
+            mapTypeId: 'hybrid',
+            disableDefaultUI: true
+        });
+        var marker = new google.maps.Marker({
+            position: {lat: 48.6157917, lng: 37.8921612},
+            map: map
+        });
+
+    });
+
 })(jQuery);

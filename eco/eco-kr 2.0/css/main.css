@@ -86,9 +86,10 @@ body {
         margin: 0; }
       body header .title-row h1 {
         line-height: 120%;
-        font-size: 5.5rem;
-        margin: 2% 0; }
+        font-size: 5rem;
+        margin: 0; }
       body header .title-row p {
+        margin-top: 15px;
         font-family: "Fira Sans", sans-serif;
         font-weight: 100;
         line-height: 175%; }
@@ -97,6 +98,11 @@ body {
           font-size: 1.7rem; }
         body header .title-row h1 {
           font-size: 2rem; } }
+      @media screen and (max-width: 1269px) {
+        body header .title-row p {
+          font-size: 1.7rem; }
+        body header .title-row h1 {
+          font-size: 4rem; } }
     body header .info-row {
       width: 100%; }
       @media screen and (max-width: 768px) {
@@ -144,33 +150,38 @@ body {
     body main .about-us .about-us-text {
       background: #ffffff;
       color: #3c3c3c;
-      width: 55%;
+      width: 56.55%;
       margin: 0;
-      padding: 60px 100px;
+      padding: 40px 100px;
       vertical-align: middle;
       position: absolute;
       top: 20%;
       right: 0;
       overflow: hidden; }
+      body main .about-us .about-us-text *::selection {
+        background-color: #eeeeee; }
       body main .about-us .about-us-text p {
         font-family: "Fira Sans", sans-serif;
         font-size: 1.8rem;
         font-weight: 300; }
-      body main .about-us .about-us-text h3 {
+      body main .about-us .about-us-text h2 {
         font-family: HelveticaNeueCyr, sans-serif;
         margin: 20px 0;
         font-size: 4rem;
-        font-weight: 500;
-        text-transform: uppercase; }
+        font-weight: 700; }
       @media screen and (max-width: 992px) {
-        body main .about-us .about-us-text {
-          padding: 30px 50px; } }
-      @media screen and (max-width: 768px) {
         body main .about-us .about-us-text {
           padding: 20px 40px; }
           body main .about-us .about-us-text p {
-            font-size: 1rem; }
-          body main .about-us .about-us-text h1 {
+            font-size: 1.3rem; }
+          body main .about-us .about-us-text h3 {
+            font-size: 3rem; } }
+      @media screen and (max-width: 768px) {
+        body main .about-us .about-us-text {
+          padding: 10px 20px; }
+          body main .about-us .about-us-text p {
+            font-size: 1.2rem; }
+          body main .about-us .about-us-text h3 {
             font-size: 2rem; } }
     body main .about-us .about-us-image2 .about-us-text {
       left: 0; }
@@ -179,181 +190,303 @@ body {
       background: url("../img/our-works/serv1.jpg") left no-repeat;
       background-size: contain;
       height: 100%; }
+      @media screen and (max-width: 768px) {
+        body main .about-us .about-us-image1 {
+          background-size: cover; } }
     body main .about-us .about-us-image2 {
       position: relative;
       margin-top: -50px;
-      background: url("../img/our-works/serv2.jpg") right no-repeat;
+      background: url("../img/our-works/our-w2.JPG") right no-repeat;
       background-size: contain;
       height: 100%; }
+      @media screen and (max-width: 768px) {
+        body main .about-us .about-us-image2 {
+          background-size: cover; } }
     body main .about-us .about-us-image3 {
       position: relative;
       margin-top: -100px;
-      background: url("../img/our-works/serv3.jpg") left no-repeat;
+      background: url("../img/our-works/our-w3.JPG") left no-repeat;
       background-size: contain;
       height: 100%; }
+      @media screen and (max-width: 768px) {
+        body main .about-us .about-us-image3 {
+          background-size: cover; } }
     body main .about-us:nth-child(3) {
       margin-bottom: -100px; }
-  body main .project-section .project-slider .project-slide {
-    position: relative;
-    height: 100vh; }
-    body main .project-section .project-slider .project-slide:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.5); }
-    body main .project-section .project-slider .project-slide:focus {
-      outline: none; }
-    body main .project-section .project-slider .project-slide .project-slide-caption {
-      color: #ffffff;
-      position: absolute;
-      height: 150px;
-      width: 36%;
-      top: 20%;
-      left: 15%;
-      text-shadow: none;
-      font-size: 18px;
-      padding: 20px 30px; }
-      body main .project-section .project-slider .project-slide .project-slide-caption:after {
+  body main .project-section {
+    position: relative; }
+    body main .project-section .project-slider .project-slide {
+      position: relative;
+      height: 100vh; }
+      body main .project-section .project-slider .project-slide:before {
         content: '';
         position: absolute;
-        width: 1px;
-        height: 150px;
-        left: 10px;
-        top: 10px;
-        background: #ffffff; }
-      body main .project-section .project-slider .project-slide .project-slide-caption h3 {
-        font-size: 5rem;
-        font-weight: 700;
-        margin-top: 0; }
-      body main .project-section .project-slider .project-slide .project-slide-caption p {
-        font-family: "Fira Sans", sans-serif;
-        font-weight: 300;
-        font-size: 1.8rem; }
-      body main .project-section .project-slider .project-slide .project-slide-caption a {
-        font-family: "Fira Sans", sans-serif;
-        font-weight: 300;
-        font-size: 1.8rem;
-        text-decoration: underline; }
-        body main .project-section .project-slider .project-slide .project-slide-caption a:hover {
-          color: #cccccc; }
-        body main .project-section .project-slider .project-slide .project-slide-caption a:visited {
-          color: inherit; }
-        body main .project-section .project-slider .project-slide .project-slide-caption a:active {
-          color: inherit; }
-        body main .project-section .project-slider .project-slide .project-slide-caption a:focus {
-          outline: none; }
-  body main .project-section .project-slider .project-slide1 {
-    background: url("../img/slider/slide1.jpg") center no-repeat;
-    background-size: cover; }
-  body main .project-section .project-slider .project-slide2 {
-    background: url("../img/slider/slide2.jpg") center no-repeat;
-    background-size: cover; }
-  body main .project-section .project-slider .project-slide3 {
-    background: url("../img/slider/slide3.jpg") center no-repeat;
-    background-size: cover; }
-  body main .project-section .project-slider-arrows {
-    position: relative;
-    width: 100%;
-    margin: 0; }
-    body main .project-section .project-slider-arrows:hover {
-      cursor: pointer; }
-    body main .project-section .project-slider-arrows .prev-project {
-      position: relative;
-      width: 80px;
-      height: 80px;
-      display: none;
-      background: #ffffff; }
-      body main .project-section .project-slider-arrows .prev-project.slick-arrow {
-        display: block;
-        margin: auto;
-        position: absolute;
-        left: -15px;
-        top: -520px; }
-        body main .project-section .project-slider-arrows .prev-project.slick-arrow:before {
-          content: '';
-          display: block;
-          position: absolute;
-          left: 35px;
-          top: 33px;
-          width: 0;
-          height: 0;
-          border-right: 8px solid #000;
-          border-top: 8px solid transparent;
-          border-bottom: 8px solid transparent; }
-    body main .project-section .project-slider-arrows .next-project {
-      width: 40%;
-      height: 80px;
-      display: none;
-      background: #ffffff;
-      vertical-align: middle; }
-      body main .project-section .project-slider-arrows .next-project.slick-arrow {
-        display: block;
-        margin: auto;
-        position: absolute;
-        right: -15px;
-        top: -520px; }
-        body main .project-section .project-slider-arrows .next-project.slick-arrow:before {
-          content: '';
-          display: block;
-          position: absolute;
-          right: 35px;
-          top: 33px;
-          width: 0;
-          height: 0;
-          border-left: 8px solid #000;
-          border-top: 8px solid transparent;
-          border-bottom: 8px solid transparent; }
-      body main .project-section .project-slider-arrows .next-project span {
-        font-size: 3rem;
-        font-family: "Fira Sans", sans-serif;
-        text-align: center;
-        display: block;
+        top: 0;
+        left: 0;
         height: 100%;
         width: 100%;
-        line-height: 78px; }
-  body main .project-section .project-slider-dots {
-    display: none;
-    padding: 0;
-    position: absolute;
-    bottom: 40px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    text-align: center; }
-    body main .project-section .project-slider-dots li {
-      list-style: none;
-      display: inline-block;
+        background: rgba(0, 0, 0, 0.4); }
+      body main .project-section .project-slider .project-slide:focus {
+        outline: none; }
+      body main .project-section .project-slider .project-slide .project-slide-caption {
+        color: #ffffff;
+        position: absolute;
+        height: 150px;
+        width: 50%;
+        top: 20%;
+        left: 11%;
+        text-shadow: none;
+        font-size: 18px;
+        padding: 20px 30px; }
+        @media screen and (max-width: 992px) {
+          body main .project-section .project-slider .project-slide .project-slide-caption {
+            width: 70%;
+            left: 20%; }
+            body main .project-section .project-slider .project-slide .project-slide-caption h3 {
+              font-size: 3rem; } }
+        body main .project-section .project-slider .project-slide .project-slide-caption:after {
+          content: '';
+          position: absolute;
+          width: 1px;
+          height: 150px;
+          left: 10px;
+          top: 10px;
+          background: #ffffff; }
+        body main .project-section .project-slider .project-slide .project-slide-caption h3 {
+          font-size: 5rem;
+          font-weight: 700;
+          margin-top: 0; }
+        body main .project-section .project-slider .project-slide .project-slide-caption p {
+          font-family: "Fira Sans", sans-serif;
+          font-weight: 300;
+          font-size: 1.8rem; }
+        body main .project-section .project-slider .project-slide .project-slide-caption a {
+          font-family: "Fira Sans", sans-serif;
+          font-weight: 300;
+          font-size: 1.8rem;
+          text-decoration: underline; }
+          body main .project-section .project-slider .project-slide .project-slide-caption a:hover {
+            color: #cccccc; }
+          body main .project-section .project-slider .project-slide .project-slide-caption a:visited, body main .project-section .project-slider .project-slide .project-slide-caption a:active, body main .project-section .project-slider .project-slide .project-slide-caption a:focus {
+            color: inherit;
+            outline: none; }
+    body main .project-section .project-slider .project-slide1 {
+      background: url("../img/slider/slide1.jpg") center no-repeat;
+      background-size: cover; }
+    body main .project-section .project-slider .project-slide2 {
+      background: url("../img/slider/slide2.jpg") center no-repeat;
+      background-size: cover; }
+    body main .project-section .project-slider .project-slide3 {
+      background: url("../img/slider/slide3.jpg") center no-repeat;
+      background-size: cover; }
+    body main .project-section .project-slider-arrows {
+      position: absolute;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      margin: 0; }
+      body main .project-section .project-slider-arrows:hover {
+        cursor: pointer; }
+      body main .project-section .project-slider-arrows .prev-project {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        display: none;
+        background: #ffffff; }
+        body main .project-section .project-slider-arrows .prev-project.slick-arrow {
+          display: block;
+          margin: auto;
+          position: absolute;
+          left: 0;
+          top: 26%;
+          z-index: 2; }
+          body main .project-section .project-slider-arrows .prev-project.slick-arrow:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 35px;
+            top: 33px;
+            width: 0;
+            height: 0;
+            border-right: 8px solid #000;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent; }
+      body main .project-section .project-slider-arrows .next-project {
+        width: 40%;
+        height: 80px;
+        display: none;
+        background: #ffffff;
+        vertical-align: middle; }
+        @media screen and (max-width: 992px) {
+          body main .project-section .project-slider-arrows .next-project {
+            width: 80px; } }
+        body main .project-section .project-slider-arrows .next-project.slick-arrow {
+          display: block;
+          margin: auto;
+          position: absolute;
+          right: 0;
+          top: 26%;
+          z-index: 2; }
+          body main .project-section .project-slider-arrows .next-project.slick-arrow:before {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 35px;
+            top: 33px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid #000;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent; }
+        body main .project-section .project-slider-arrows .next-project span {
+          font-size: 3rem;
+          font-family: "Fira Sans", sans-serif;
+          text-align: center;
+          display: block;
+          height: 100%;
+          width: 100%;
+          line-height: 78px; }
+          body main .project-section .project-slider-arrows .next-project span::selection {
+            background-color: transparent; }
+          @media screen and (max-width: 992px) {
+            body main .project-section .project-slider-arrows .next-project span {
+              display: none; } }
+    body main .project-section .project-slider-dots {
+      display: none;
+      padding: 0;
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      right: 0;
       margin: 0 auto;
-      padding: 0; }
-      body main .project-section .project-slider-dots li button {
+      text-align: center; }
+      body main .project-section .project-slider-dots li {
         list-style: none;
-        font-size: 0;
-        display: block;
-        margin: 0 5px;
-        padding: 0;
-        height: 20px;
-        width: 20px;
-        border-radius: 50%;
-        background: none;
-        border: 1px solid #ffffff;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        cursor: pointer;
-        transition: all ease-out .2s; }
-        body main .project-section .project-slider-dots li button:focus {
-          outline: none; }
-        body main .project-section .project-slider-dots li button:hover {
-          transition: all ease-out .2s;
-          transform: scale(1.3); }
-    body main .project-section .project-slider-dots .slick-active button {
-      transition: all ease-out .2s;
-      background: #ffffff; }
-  body main .catalog {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 0; }
+        body main .project-section .project-slider-dots li button {
+          list-style: none;
+          font-size: 0;
+          display: block;
+          margin: 0 5px;
+          padding: 0;
+          height: 20px;
+          width: 20px;
+          border-radius: 50%;
+          background: none;
+          border: 1px solid #ffffff;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          cursor: pointer;
+          transition: all ease-out .2s; }
+          body main .project-section .project-slider-dots li button:focus {
+            outline: none; }
+          body main .project-section .project-slider-dots li button:hover {
+            transition: all ease-out .2s;
+            transform: scale(1.3); }
+      body main .project-section .project-slider-dots .slick-active button {
+        transition: all ease-out .2s;
+        background: #ffffff; }
+  body main .garden {
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+    background: #ffffff;
+    overflow: hidden; }
+    body main .garden .garden-info {
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center; }
+      body main .garden .garden-info h2 {
+        padding: 30px;
+        font-weight: 700;
+        font-size: 5rem;
+        margin: 0 auto;
+        color: #3c3c3c; }
+      body main .garden .garden-info p {
+        font-family: "Fira Sans", sans-serif;
+        font-weight: 300;
+        padding: 30px;
+        text-align: left;
+        font-size: 1.8rem; }
+    body main .garden .map {
+      background: #000;
+      height: 100vh;
+      overflow: hidden; }
+      body main .garden .map div.gmnoprint,
+      body main .garden .map div.gmnoscreen {
+        display: none !important; }
+    body main .garden svg {
+      height: 200px; }
+  body main .price-list {
     height: 100vh;
-    background: #3c763d; }
+    background: #438045;
+    color: #ffffff; }
+    body main .price-list h2 {
+      font-weight: 700;
+      font-size: 5rem;
+      text-align: center;
+      letter-spacing: 2px; }
+    body main .price-list p {
+      font-family: "Fira Sans", sans-serif;
+      font-weight: 300;
+      font-size: 1.8rem;
+      text-align: center;
+      width: 50%;
+      margin: 0 auto; }
+    body main .price-list .catalog-link-block {
+      background-size: cover;
+      height: 50%;
+      padding: 30px; }
+    body main .price-list .price-list-link-block {
+      padding: 30px; }
+      body main .price-list .price-list-link-block a {
+        transition: .3s ease-out;
+        padding: 30px;
+        width: 350px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        background: #438045; }
+        body main .price-list .price-list-link-block a h3 {
+          margin: 0; }
+        body main .price-list .price-list-link-block a span {
+          margin: 15px 0;
+          font-family: "Fira Sans", sans-serif;
+          font-weight: 100;
+          font-size: 1.8rem; }
+        body main .price-list .price-list-link-block a svg {
+          display: block;
+          height: 200px;
+          transition: .5s ease; }
+        body main .price-list .price-list-link-block a:hover {
+          color: inherit;
+          text-decoration: none; }
+        body main .price-list .price-list-link-block a:hover svg {
+          transition: .5s ease;
+          transform: translate(0, -10px); }
+        body main .price-list .price-list-link-block a .download-elem1,
+        body main .price-list .price-list-link-block a .download-elem2 {
+          transition: .5s ease-out; }
+        body main .price-list .price-list-link-block a:hover .download-elem1, body main .price-list .price-list-link-block a:hover .download-elem2 {
+          transform: translate(0, 30px);
+          transition: .5s ease; }
+        body main .price-list .price-list-link-block a:focus {
+          color: inherit;
+          text-decoration: none; }
+  body main .contacts {
+    height: 100vh;
+    background: #ffffff; }
+    body main .contacts h2 {
+      font-weight: 700;
+      font-size: 5rem;
+      text-align: center; }
 
 /*# sourceMappingURL=main.css.map */

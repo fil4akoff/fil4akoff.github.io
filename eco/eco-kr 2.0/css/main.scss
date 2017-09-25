@@ -123,10 +123,11 @@ body {
       }
       h1 {
         line-height: 120%;
-        font-size: 5.5rem;
-        margin: 2% 0;
+        font-size: 5rem;
+        margin: 0;
       }
       p {
+        margin-top: 15px;
         font-family: "Fira Sans", sans-serif;
         font-weight: 100;
         line-height: 175%;
@@ -137,6 +138,14 @@ body {
         }
         h1 {
           font-size: 2rem;
+        }
+      }
+      @media screen and (max-width: 1269px) {
+        p {
+          font-size: 1.7rem;
+        }
+        h1 {
+          font-size: 4rem;
         }
       }
     }
@@ -164,11 +173,6 @@ body {
           font-size: 5rem;
           margin: 0;
         }
-        //p {
-        //  font-family: "Fira Sans", sans-serif;
-        //  font-weight: 100;
-        //  font-size: 2rem;
-        //}
         &:before {
           content: '';
           position: absolute;
@@ -208,38 +212,45 @@ body {
       .about-us-text {
         background: $secondColor;
         color: $mainColor;
-        width: 55%;
+        width: 56.55%;
         margin: 0;
-        padding: 60px 100px;
+        padding: 40px 100px;
         vertical-align: middle;
         position: absolute;
         top: 20%;
         right: 0;
         //max-height: calc(80vh - 20%);
         overflow: hidden;
-
+        & *::selection {
+          background-color: #eeeeee;
+        }
         p {
           font-family: "Fira Sans", sans-serif;
           font-size: 1.8rem;
           font-weight: 300;
         }
-        h3 {
+        h2 {
           font-family: HelveticaNeueCyr, sans-serif;
           margin: 20px 0;
           font-size: 4rem;
-          font-weight: 500;
-          text-transform: uppercase;
+          font-weight: 700;
+          //text-transform: uppercase;
         }
         @media screen and (max-width: 992px) {
-          padding: 30px 50px;
-
-        }
-        @media screen and (max-width: 768px) {
           padding: 20px 40px;
           p {
-            font-size: 1rem;
+            font-size: 1.3rem;
           }
-          h1 {
+          h3 {
+            font-size: 3rem;
+          }
+        }
+        @media screen and (max-width: 768px) {
+          padding: 10px 20px;
+          p {
+            font-size: 1.2rem;
+          }
+          h3 {
             font-size: 2rem;
           }
         }
@@ -255,20 +266,29 @@ body {
         background: url("../img/our-works/serv1.jpg") left no-repeat;
         background-size: contain;
         height: 100%;
+        @media screen and (max-width: 768px) {
+          background-size: cover;
+        }
       }
       .about-us-image2 {
         position: relative;
         margin-top: -50px;
-        background: url("../img/our-works/serv2.jpg") right no-repeat;
+        background: url("../img/our-works/our-w2.JPG") right no-repeat;
         background-size: contain;
         height: 100%;
+        @media screen and (max-width: 768px) {
+          background-size: cover;
+        }
       }
       .about-us-image3 {
         position: relative;
         margin-top: -100px;
-        background: url("../img/our-works/serv3.jpg") left no-repeat;
+        background: url("../img/our-works/our-w3.JPG") left no-repeat;
         background-size: contain;
         height: 100%;
+        @media screen and (max-width: 768px) {
+          background-size: cover;
+        }
       }
       &:nth-child(3) {  // Костыль для {image3 margin -100}
         margin-bottom: -100px;
@@ -277,7 +297,9 @@ body {
 
     //  -------------------------------------------- SLICK SLIDER
     .project-section {
+      position: relative;
       .project-slider {
+
         .project-slide {
           position: relative;
           height: 100vh;
@@ -288,22 +310,31 @@ body {
             left: 0;
             height: 100%;
             width: 100%;
-            background: rgba(0, 0, 0, .5);
+            background: rgba(0, 0, 0, .4);
           }
           &:focus {
             outline: none;
           }
+
           // ----------------------------------------- SLIDER CAPTION
           .project-slide-caption {
             color: $secondColor;
             position: absolute;
             height: 150px;
-            width: 36%;
+            width: 50%;
             top: 20%;
-            left: 15%;
+            left: 11%;
             text-shadow: none;
             font-size: 18px;
             padding: 20px 30px;
+            @media screen and (max-width: 992px) {
+              width: 70%;
+              left: 20%;
+              h3 {
+                font-size: 3rem;
+              }
+
+            }
             &:after {
               content: '';
               position: absolute;
@@ -331,15 +362,19 @@ body {
               &:hover {
                 color: darken($secondColor, 20%);
               }
-              &:visited {
-                color: inherit;
-              }
-              &:active {
-                color: inherit;
-              }
+              &:visited,
+              &:active,
               &:focus {
+                color: inherit;
                 outline: none;
+
               }
+              //&:active {
+              //  color: inherit;
+              //}
+              //&:focus {
+              //  outline: none;
+              //}
             }
           }
         }
@@ -356,13 +391,16 @@ body {
           background-size: cover;
         }
       }
-      .project-slider-arrows {
-        position: relative;
+      .project-slider-arrows { // ---------------------- ARROWS
+        position: absolute;
+        left: 0;
+        height: 100vh;
         width: 100%;
         margin: 0;
         &:hover {
           cursor: pointer;
         }
+
         // ----------------------------------------------- LEFT ARROW
         .prev-project {
           position: relative;
@@ -374,8 +412,10 @@ body {
             display: block;
             margin: auto;
             position: absolute;
-            left: -15px;
-            top: -520px;
+            left: 0;
+            top: 26%;
+            z-index: 2;
+
             &:before {
               content: '';
               display: block;
@@ -398,12 +438,16 @@ body {
           display: none;
           background: $secondColor;
           vertical-align: middle;
+          @media screen and (max-width: 992px) {
+            width: 80px;
+          }
           &.slick-arrow {
             display: block;
             margin: auto;
             position: absolute;
-            right: -15px;
-            top: -520px;
+            right: 0;
+            top: 26%;
+            z-index: 2;
             &:before {
               content: '';
               display: block;
@@ -425,6 +469,12 @@ body {
             height: 100%;
             width: 100%;
             line-height: 78px;
+            &::selection {
+              background-color: transparent;
+            }
+            @media screen and (max-width: 992px) {
+              display: none;
+            }
           }
         }
       }
@@ -475,14 +525,138 @@ body {
       }
     } // ------------------------------------------ END OF SLIDER
 
+    // ---------------------------------------- GARDEN WITH MAP
+    .garden {
+      padding: 0;
+      position: relative;
+      min-height: 100vh;
+      background: $secondColor;
+      overflow: hidden;
+      .garden-info {
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        h2 {
+          padding: 30px;
+          font-weight: 700;
+          font-size: 5rem;
+          margin: 0 auto;
+          color: $mainColor;
+        }
+        p {
+          font-family: "Fira Sans", sans-serif;
+          font-weight: 300;
+          padding: 30px;
+          text-align: left;
+          font-size: 1.8rem;
+        }
+      }
+      .map {
+        background: #000;
+        height: 100vh;
+        overflow: hidden;
+        div.gmnoprint,
+        div.gmnoscreen {
+          display: none !important;
+        }
+      }
 
-    .catalog {
+      svg {
+        height: 200px;
+      }
+    }
+    // --------------------------------------- PRICE LIST
+    .price-list {
       height: 100vh;
-      background: #3c763d;
+      background: #438045;
+      color: $secondColor;
+      h2 {
+        font-weight: 700;
+        font-size: 5rem;
+        text-align: center;
+        letter-spacing: 2px;
+      }
+      p {
+        font-family: "Fira Sans", sans-serif;
+        font-weight: 300;
+        font-size: 1.8rem;
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+      }
+      .catalog-link-block {
+        //background: url("../img/catalog/IMG_7279.JPG") no-repeat center;
+        background-size: cover;
+        height: 50%;
+        padding: 30px;
+      }
+      .price-list-link-block { // ------------------- PRICE DOWNLOAD BUTTON
+        padding: 30px;
+        a {
+          transition: .3s ease-out;
+          padding: 30px;
+          width: 350px;
+          display: flex;
+          flex-flow: column;
+          justify-content: space-around;
+          align-items: center;
+          text-align: center;
+          background: #438045;
+          h3 {
+            margin: 0;
+          }
+          span {
+            margin: 15px 0;
+            font-family: "Fira Sans", sans-serif;
+            font-weight: 100;
+            font-size: 1.8rem;
+          }
+          svg {
+            display: block;
+            height: 200px;
+            transition: .5s ease;
+          }
+          &:hover {
+            color: inherit;
+            text-decoration: none;
+          }
+          &:hover svg {
+            transition: .5s ease;
+            transform: translate(0, -10px);
+          }
+          .download-elem1,
+          .download-elem2 {
+            transition: .5s ease-out;
+          }
+          &:hover .download-elem1,
+          &:hover .download-elem2 {
+            transform: translate(0, 30px);
+            transition: .5s ease;
+          }
+          &:focus {
+            color: inherit;
+            text-decoration: none;
+          }
+        }
+      }
     }
 
+    // --------------------------------------- CONTACTS
+    .contacts {
+      height: 100vh;
+      background: $secondColor;
+      h2 {
+        font-weight: 700;
+        font-size: 5rem;
+        text-align: center;
 
-
+      }
+    }
   }
 }
+
+
 
