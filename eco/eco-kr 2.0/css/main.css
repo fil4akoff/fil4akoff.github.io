@@ -187,7 +187,7 @@ body {
       left: 0; }
     body main .about-us .about-us-image1 {
       position: relative;
-      background: url("../img/our-works/serv1.jpg") left no-repeat;
+      background: url("../img/our-works/our-w1.jpg") left no-repeat;
       background-size: contain;
       height: 100%; }
       @media screen and (max-width: 768px) {
@@ -511,5 +511,13 @@ body {
           text-decoration: none; }
       body main .contacts .col-lg-6 svg {
         height: 30px; }
+  body h2 {
+    text-align: center; }
+  body .our-work-section img {
+    width: 100%; }
+  body .our-work-section p {
+    text-align: center;
+    vertical-align: middle;
+    height: 50px; }
 
 /*# sourceMappingURL=main.css.map */

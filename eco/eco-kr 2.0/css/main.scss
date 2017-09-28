@@ -263,7 +263,7 @@ body {
 
       .about-us-image1 {
         position: relative;
-        background: url("../img/our-works/serv1.jpg") left no-repeat;
+        background: url("../img/our-works/our-w1.jpg") left no-repeat;
         background-size: contain;
         height: 100%;
         @media screen and (max-width: 768px) {
@@ -687,7 +687,20 @@ body {
           height: 30px;
         }
       }
+    }
+  }
 
+  h2 {
+    text-align: center;
+  }
+  .our-work-section {
+    img {
+      width: 100%;
+    }
+    p {
+      text-align: center;
+      vertical-align: middle;
+      height: 50px;
     }
   }
 }
