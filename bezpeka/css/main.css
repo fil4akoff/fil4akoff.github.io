@@ -279,6 +279,12 @@ body {
         body main .main-news .project-slider-dots .slick-active button {
           transition: all ease-out .2s;
           background: #ffffff; }
+    body main .custom-news h2 {
+      text-align: center;
+      margin: 0 auto 50px; }
+    body main .custom-news img {
+      height: 100%;
+      padding: 20px; }
     body main .main-ask h2 {
       text-align: center;
       margin: auto;
