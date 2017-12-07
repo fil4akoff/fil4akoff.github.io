@@ -7,6 +7,7 @@
     <link rel="icon" href="../fav.ico">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/slick.css">
 
 </head>
 <body>
@@ -22,6 +23,7 @@
         </h1>
     </div>
     <nav class="navbar navbar-expand-md navbar-dark">
+
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
@@ -53,11 +55,11 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="../slovo/">Вам слово</a>
+                    <a class="active nav-link" href="javascript:void(0);">Вам слово</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="active nav-link" href="../partners/">Партнери</a>
+                    <a class="nav-link" href="../partners/">Партнери</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../contacts/">Контакти</a>
@@ -70,50 +72,35 @@
     </nav>
 </header>
 
-<main>
-    <section class="container-fluid main-partners">
+<main style="margin: 0">
+
+    <section class="container-fluid vam-slovo">
         <div class="row">
-            <h2>Наші партнери</h2>
+            <div class="col-md-4 add-news">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKxF8-fFsw4Qm_C76rdyonZ1WcsnAH8lwaNEKg6yHyxEJjHg/viewform?usp=sf_link" target="_blank" class="add-news-button">Опублікувати новину</a>
+            </div>
+            <div class="col-md-8">
+                <h2>"Вам слово"</h2>
+                <p>Розміщуйте будь-які новини та думки, які ви вважаєте цікавими та важливими в житті краматорчців. Після перевірки модератором ваша новина буде опублікована на нашому сайті.</p>
+                <p>Публікація може будти повністю анонімною. Для прикріплення файлів (фото, докумнетів) до новини необхідна реєстрація аккаунту Google</p>
+            </div>
+
         </div>
-        <div class="row main-partners-section">
-            <div class="main-partner-card col-md-4 col-sm-12">
-                Морська піхота України
-                <img src="morpeh.jpg" alt="">
-            </div>
-            <div class="main-partner-card col-md-4 col-sm-12">
-                Спілка ветеранів АТО України
-                <img src="ato.jpg" alt="">
-            </div>
-            <div class="main-partner-card col-md-4 col-sm-12">
-                ВПО "Морська піхота України"
-                <img src="vpo.jpg" alt="">
-            </div>
-            <!--<div class="main-partner-card col-md-4 col-sm-12" style="opacity: .5">-->
-                <!--Партнер 4-->
-                <!--<img src="partner.jpg" alt="">-->
-            <!--</div>-->
-            <!--<div class="main-partner-card col-md-4 col-sm-12" style="opacity: .5">-->
-                <!--Партнер 5-->
-                <!--<img src="partner.jpg" alt="">-->
-            <!--</div>-->
-            <!--<div class="main-partner-card col-md-4 col-sm-12" style="opacity: .5">-->
-                <!--Партнер 6-->
-                <!--<img src="partner.jpg" alt="">-->
-            <!--</div>-->
+        <div class="row">
         </div>
     </section>
 
 </main>
 <footer class="container-fluid">
     <div class="row contacts-footer">
-        <div class="col-md-4">
+        <div class="col-4">
             <p>2017 (c) ГО "ПРАВОВИЙ ЗАХИСТ ТА БЕЗПЕКА УКРАЇНИ"</p>
             <p>+380935106225</p>
             <p>bezpeka.org.ua@gmail.com</p>
         </div>
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <p>84300, Україна</p>
+        <div class="col-4"></div>
+        <div class="col-4">
+            <p>84300</p>
             <p>м. Краматорськ, Донецька обл.</p>
             <p>вул. Паркова 61, 1 поверх</p>
         </div>
@@ -125,5 +112,7 @@
 <script src="../js/jquery-3.2.1.min.js"></script>
 <script src="../js/popper.js"></script>
 <script src="../js/bootstrap.min.js"></script>
+<script src="../js/slick.min.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>

@@ -72,7 +72,7 @@ body {
       @media screen and (max-width: 575px) {
         body header .navbar {
           left: 0;
-          bottom: 20px;
+          bottom: 0;
           margin-left: 65px;
           transition: ease .1s;
           line-height: 80%; } }
@@ -114,7 +114,7 @@ body {
       body header .navbar .navbar-toggler {
         position: absolute;
         left: -45px;
-        bottom: 0; }
+        bottom: 20px; }
         body header .navbar .navbar-toggler .navbar-toggler-button {
           position: relative;
           display: block;
@@ -148,6 +148,9 @@ body {
     min-height: 60vh;
     margin: 50px;
     background: #ffffff; }
+    @media screen and (max-width: 575px) {
+      body main {
+        margin: 30px 10px; } }
     body main h2 {
       font-family: "Trebuchet MS", sans-serif; }
     body main .main-info img {
@@ -163,8 +166,8 @@ body {
       color: #ffffff;
       margin-top: 50px;
       padding: 10px 0;
-      background: #4e993d;
-      border: 2px solid #4e993d;
+      background: #4E993D;
+      border: 2px solid #4E993D;
       border-radius: 5px;
       transition: ease .2s; }
       body main .main-info .main-info-text .join-us:focus {
@@ -172,12 +175,28 @@ body {
       body main .main-info .main-info-text .join-us:hover {
         text-decoration: none;
         background: #ffffff;
-        color: #4e993d;
+        color: #4E993D;
         transition: ease .2s;
         cursor: pointer; }
       body main .main-info .main-info-text .join-us:active {
         transform: scale(0.98);
         transition: ease .1s; }
+    body main .main-alert {
+      margin-top: 30px; }
+      body main .main-alert .main-alert-card {
+        padding: 20px;
+        border-radius: 10px;
+        border: 2px solid #ff4757;
+        background: rgba(255, 71, 87, 0.1); }
+        body main .main-alert .main-alert-card h3 {
+          color: #ff4757;
+          text-align: center; }
+        body main .main-alert .main-alert-card p {
+          font-size: 1.3rem; }
+    body main .main-subinfo {
+      margin-top: 30px; }
+      body main .main-subinfo ul {
+        list-style: none; }
     body main .main-meta h2 {
       margin: auto;
       margin-bottom: 50px; }
@@ -295,13 +314,13 @@ body {
               color: inherit;
               outline: none; }
       body main .main-news .project-slider .project-slide1 {
-        background: url("../news/news01.jpg") center no-repeat;
+        background: url("../news-global/news01.jpg") center no-repeat;
         background-size: cover; }
       body main .main-news .project-slider .project-slide2 {
-        background: url("../news/news02.jpg") center no-repeat;
+        background: url("../news-global/news02.jpg") center no-repeat;
         background-size: cover; }
       body main .main-news .project-slider .project-slide3 {
-        background: url("../news/news03.jpg") center no-repeat;
+        background: url("../news-global/news03.jpg") center no-repeat;
         background-size: cover; }
       body main .main-news .project-slider-arrows {
         position: absolute;
@@ -320,7 +339,7 @@ body {
           height: 80px;
           display: none;
           border: 1px solid #ffffff;
-          opacity: .5;
+          opacity: .9;
           border-top: none;
           border-right: none; }
           body main .main-news .project-slider-arrows .prev-project.slick-arrow {
@@ -335,7 +354,7 @@ body {
           height: 80px;
           display: none;
           border: 1px solid #ffffff;
-          opacity: .5;
+          opacity: .9;
           border-left: none;
           border-bottom: none; }
           body main .main-news .project-slider-arrows .next-project.slick-arrow {
@@ -392,6 +411,32 @@ body {
     body main .custom-news .copyright {
       width: 100%;
       text-align: right; }
+    body main .custom-alley img {
+      width: 100%; }
+    body main .main-local-news h2 {
+      display: block;
+      margin: 30px auto; }
+    body main .main-local-news .local-news-card {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 15px 10%;
+      color: #000;
+      margin-bottom: 40px;
+      border-right: 2px solid #fff; }
+      body main .main-local-news .local-news-card img {
+        max-width: 100%; }
+        @media screen and (max-width: 575px) {
+          body main .main-local-news .local-news-card img {
+            display: none; } }
+      body main .main-local-news .local-news-card:hover {
+        text-decoration: none;
+        border-right: 2px solid #444444; }
+    body main .main-local-news .local-news-card-alert {
+      padding: 20px;
+      background: #19264e;
+      color: #fff;
+      border-radius: 10px; }
     body main .main-ask h2 {
       text-align: center;
       margin: auto;
@@ -399,7 +444,14 @@ body {
     body main .main-ask p {
       margin: 0 auto;
       display: block;
-      width: 50%; }
+      width: 80%; }
+      @media screen and (max-width: 575px) {
+        body main .main-ask p {
+          width: 100%; } }
+    body main .main-ask ul {
+      display: block;
+      margin: 0 10%;
+      list-style: none; }
     body main .main-ask a {
       margin: 30px auto;
       width: 260px;
@@ -430,6 +482,34 @@ body {
       margin-bottom: 50px; }
     body main .main-feedback .feedback-card img {
       max-width: 100%; }
+    body main .vam-slovo {
+      padding: 50px; }
+      @media screen and (max-width: 575px) {
+        body main .vam-slovo {
+          padding: 10px; } }
+      body main .vam-slovo .add-news {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        body main .vam-slovo .add-news .add-news-button {
+          font-family: "Segoe UI", sans-serif;
+          font-size: 1.1rem;
+          color: #fff;
+          padding: 20px;
+          border-radius: 5px;
+          border: 2px solid #fff;
+          background: #4E993D;
+          vertical-align: bottom;
+          transition: ease .2s; }
+          body main .vam-slovo .add-news .add-news-button:hover {
+            text-decoration: none;
+            transition: ease .2s;
+            border: 2px solid #4E993D;
+            background: #ffffff;
+            color: #4E993D; }
+          body main .vam-slovo .add-news .add-news-button:active {
+            transform: scale(0.98);
+            transition: ease .2s; }
     body main .contact-block {
       padding: 20px;
       top: 80px;
