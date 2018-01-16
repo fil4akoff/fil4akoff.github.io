@@ -1,0 +1,710 @@
+@import "norm.css";
+
+@keyframes arrowWiggle {
+  0% { bottom: 55px }
+  50% { bottom: 45px }
+  100% { bottom: 55px }
+}
+
+@keyframes buttonHover {
+  0% { width: 0 }
+  100% { width: 80% }
+}
+
+$mainColor: #3c3c3c;
+$secondColor: #ffffff;
+
+body {
+  height: 100%;
+  font-family: HelveticaNeueCyr, sans-serif;
+  header {
+    height: 100vh;
+    padding: 30px 10%;
+    .navbar {
+      background: none;
+      border: none;
+      & * {
+        border: none;
+        outline: none;
+      }
+      // -------------------- CANT TOUCH THIS. BURGER MENU LIES HERE
+      .container-fluid {
+        .navbar-header {
+          button {
+            transition: all ease .3s;
+            .icon-bar {
+              background: $secondColor;
+            }
+            &:hover {
+              transition: all ease .3s;
+              background: rgba(255, 255, 255, .2);
+            }
+            &:focus {
+              background: rgba(255, 255, 255, .2);
+            }
+          }
+        }
+        .navbar-collapse {
+          .navbar-right {
+            .nav-button {
+              position: relative;
+              color: $secondColor;
+              font-size: 18px;
+              font-weight: 100;
+              letter-spacing: 1px;
+              transition: all ease .3s;
+              border: 2px solid transparent;
+              @media screen and (max-width: 992px) {
+                margin-right: -30px;
+                transform: scale(.8);
+              }
+              &:hover .nav-button-hover {
+                animation: buttonHover .3s ease-out;
+                width: 80%;
+              }
+              // -------------------- NAVBAR BUTTON ANIMATION
+              .nav-button-hover {
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                //z-index: 2;
+                background: #ffffff;
+                width: 0;
+                height: 1px;
+                @media screen and (max-width: 768px) {
+                  display: none;
+                }
+              }
+              &:hover {
+                transition: all ease .3s;
+
+              }
+              &:active {
+                transition: all ease .3s;
+
+              }
+            }
+          }
+        }
+        .navbar-brand {
+          padding: 0;
+          transition: all ease-out .3s;
+          img {
+            height: 100%;
+          }
+          &:active {
+            transition: all ease-out .3s;
+            transform: scale(.95);
+          }
+        }
+      }
+    }
+    .header-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+    }
+    // ---------------------------------------- TITLE ROW
+    .title-row {
+      color: $secondColor;
+      font-size: 1.8rem;
+      width: 100%;
+      padding: 50px 0;
+      .row {
+
+      }
+      .row > * {
+        margin: 0;
+      }
+      h1 {
+        line-height: 120%;
+        font-size: 5rem;
+        margin: 0;
+      }
+      p {
+        margin-top: 15px;
+        font-family: "Fira Sans", sans-serif;
+        font-weight: 100;
+        line-height: 175%;
+      }
+      @media screen and (max-width: 992px) {
+        p {
+          font-size: 1.7rem;
+        }
+        h1 {
+          font-size: 2rem;
+        }
+      }
+      @media screen and (max-width: 1269px) {
+        p {
+          font-size: 1.7rem;
+        }
+        h1 {
+          font-size: 4rem;
+        }
+      }
+    }
+
+    // ---------------------------------- INFO BLOCK WITH STATISTICS
+    .info-row{
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+      @media screen and (max-width: 992px) {
+        margin-top: -20px;
+        transform: scale(.9);
+      }
+      width: 100%;
+      .info-block {
+        color: $secondColor;
+        position: relative;
+        font-family: "Fira Sans", sans-serif;
+        font-weight: 100;
+        font-size: 1.8rem;
+
+        span {
+          font-family: HelveticaNeueCyr,sans-serif;
+          font-weight: 500;
+          font-size: 5rem;
+          margin: 0;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 1px;
+          height: 100%;
+          background: $secondColor;
+        }
+      }
+    }
+    // ------------------------------------------ ARROW BUTTON
+    .arrow-button {
+      width: 20px;
+      height: 20px;
+      border: 1px solid $secondColor;
+      border-top: none;
+      border-left: none;
+      position: absolute;
+      bottom: 50px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      transform: rotate(45deg);
+      animation: arrowWiggle 1s infinite ease-in-out;
+    }
+  }
+  // ----------------------------------------------------- MAIN
+  main {
+
+
+
+    .about-us {
+      padding: 0;
+      height: 80vh;
+
+      .about-us-text {
+        background: $secondColor;
+        color: $mainColor;
+        width: 56.55%;
+        margin: 0;
+        padding: 40px 100px;
+        vertical-align: middle;
+        position: absolute;
+        top: 20%;
+        right: 0;
+        //max-height: calc(80vh - 20%);
+        overflow: hidden;
+        & *::selection {
+          background-color: #eeeeee;
+        }
+        p {
+          font-family: "Fira Sans", sans-serif;
+          font-size: 1.8rem;
+          font-weight: 300;
+        }
+        h2 {
+          font-family: HelveticaNeueCyr, sans-serif;
+          margin: 20px 0;
+          font-size: 4rem;
+          font-weight: 700;
+          //text-transform: uppercase;
+        }
+        @media screen and (max-width: 992px) {
+          padding: 20px 40px;
+          p {
+            font-size: 1.3rem;
+          }
+          h3 {
+            font-size: 3rem;
+          }
+        }
+        @media screen and (max-width: 768px) {
+          padding: 10px 20px;
+          p {
+            font-size: 1.2rem;
+          }
+          h3 {
+            font-size: 2rem;
+          }
+        }
+      }
+      .about-us-image2 {
+        .about-us-text {
+          left: 0;
+        }
+      }
+
+      .about-us-image1 {
+        position: relative;
+        background: url("../img/our-works/our-w1.jpg") left no-repeat;
+        background-size: contain;
+        height: 100%;
+        @media screen and (max-width: 768px) {
+          background-size: cover;
+        }
+      }
+      .about-us-image2 {
+        position: relative;
+        margin-top: -50px;
+        background: url("../img/our-works/our-w2.JPG") right no-repeat;
+        background-size: contain;
+        height: 100%;
+        @media screen and (max-width: 768px) {
+          background-size: cover;
+        }
+      }
+      .about-us-image3 {
+        position: relative;
+        margin-top: -100px;
+        background: url("../img/our-works/our-w3.JPG") left no-repeat;
+        background-size: contain;
+        height: 100%;
+        @media screen and (max-width: 768px) {
+          background-size: cover;
+        }
+      }
+      &:nth-child(3) {  // Костыль для {image3 margin -100}
+        margin-bottom: -100px;
+      }
+    }
+
+    //  -------------------------------------------- SLICK SLIDER
+    .project-section {
+      position: relative;
+      .project-slider {
+
+        .project-slide {
+          position: relative;
+          height: 100vh;
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, .4);
+          }
+          &:focus {
+            outline: none;
+          }
+
+          // ----------------------------------------- SLIDER CAPTION
+          .project-slide-caption {
+            color: $secondColor;
+            position: absolute;
+            height: 150px;
+            width: 50%;
+            top: 20%;
+            left: 11%;
+            text-shadow: none;
+            font-size: 18px;
+            padding: 20px 30px;
+            @media screen and (max-width: 992px) {
+              width: 70%;
+              left: 20%;
+              h3 {
+                font-size: 3rem;
+              }
+
+            }
+            &:after {
+              content: '';
+              position: absolute;
+              width: 1px;
+              height: 150px;
+              left: 10px;
+              top: 10px;
+              background: #ffffff;
+            }
+            h3 {
+              font-size: 5rem;
+              font-weight: 700;
+              margin-top: 0;
+            }
+            p {
+              font-family: "Fira Sans", sans-serif;
+              font-weight: 300;
+              font-size: 1.8rem;
+            }
+            a {
+              font-family: "Fira Sans", sans-serif;
+              font-weight: 300;
+              font-size: 1.8rem;
+              text-decoration: underline;
+              &:hover {
+                color: darken($secondColor, 20%);
+              }
+              &:visited,
+              &:active,
+              &:focus {
+                color: inherit;
+                outline: none;
+
+              }
+              //&:active {
+              //  color: inherit;
+              //}
+              //&:focus {
+              //  outline: none;
+              //}
+            }
+          }
+        }
+        .project-slide1 {
+          background: url("../img/slider/slide1.jpg") center no-repeat;
+          background-size: cover;
+        }
+        .project-slide2 {
+          background: url("../img/slider/slide2.jpg") center no-repeat;
+          background-size: cover;
+        }
+        .project-slide3 {
+          background: url("../img/slider/slide3.jpg") center no-repeat;
+          background-size: cover;
+        }
+      }
+      .project-slider-arrows { // ---------------------- ARROWS
+        position: absolute;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        &:hover {
+          cursor: pointer;
+        }
+
+        // ----------------------------------------------- LEFT ARROW
+        .prev-project {
+          position: relative;
+          width: 80px;
+          height: 80px;
+          display: none;
+          background: $secondColor;
+          &.slick-arrow {
+            display: block;
+            margin: auto;
+            position: absolute;
+            left: 0;
+            top: 26%;
+            z-index: 2;
+
+            &:before {
+              content: '';
+              display: block;
+              position: absolute;
+              left: 35px;
+              top: 33px;
+              width: 0;
+              height: 0;
+              border-right: 8px solid #000;
+              border-top: 8px solid transparent;
+              border-bottom: 8px solid transparent;
+
+            }
+          }
+        }
+        // ------------------------------------------ RIGHT ARROW
+        .next-project {
+          width: 40%;
+          height: 80px;
+          display: none;
+          background: $secondColor;
+          vertical-align: middle;
+          @media screen and (max-width: 992px) {
+            width: 80px;
+          }
+          &.slick-arrow {
+            display: block;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: 26%;
+            z-index: 2;
+            &:before {
+              content: '';
+              display: block;
+              position: absolute;
+              right: 35px;
+              top: 33px;
+              width: 0;
+              height: 0;
+              border-left: 8px solid #000;
+              border-top: 8px solid transparent;
+              border-bottom: 8px solid transparent;
+            }
+          }
+          span {
+            font-size: 3rem;
+            font-family: "Fira Sans", sans-serif;
+            text-align: center;
+            display: block;
+            height: 100%;
+            width: 100%;
+            line-height: 78px;
+            &::selection {
+              background-color: transparent;
+            }
+            @media screen and (max-width: 992px) {
+              display: none;
+            }
+          }
+        }
+      }
+      // ----------------------------------------- SLIDER DOTS
+      .project-slider-dots {
+        display: none;
+        padding: 0;
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+        li {
+          list-style: none;
+          display: inline-block;
+          margin: 0 auto;
+          padding: 0;
+          button {
+            list-style: none;
+            font-size: 0;
+            display: block;
+            margin: 0 5px;
+            padding: 0;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: none;
+            border: 1px solid $secondColor;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            cursor: pointer;
+            transition: all ease-out .2s;
+            &:focus {
+              outline: none;
+            }
+            &:hover {
+              transition: all ease-out .2s;
+              transform: scale(1.3);
+            }
+          }
+        }
+        .slick-active button {
+          transition: all ease-out .2s;
+          background: $secondColor;
+        }
+      }
+    } // ------------------------------------------ END OF SLIDER
+
+    // ---------------------------------------- MAP SECTION
+    .garden {
+      padding: 0;
+      position: relative;
+      min-height: 100vh;
+      background: $secondColor;
+      overflow: hidden;
+      .garden-info {
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        @media screen and (max-width: 992px) {
+          transform: scale(.9);
+        }
+        @media screen and (max-width: 768px) {
+          transform: scale(1);
+        }
+
+        h2 {
+          padding: 30px;
+          font-weight: 700;
+          font-size: 5rem;
+          margin: 0 auto;
+          color: $mainColor;
+        }
+        p {
+          font-family: "Fira Sans", sans-serif;
+          font-weight: 300;
+          padding: 30px;
+          text-align: left;
+          font-size: 1.8rem;
+        }
+      }
+      .map {
+        background: #000;
+        height: 100vh;
+        overflow: hidden;
+        div.gmnoprint,
+        div.gmnoscreen {
+          display: none !important;
+        }
+      }
+
+      svg {
+        height: 200px;
+      }
+    }
+    // --------------------------------------- PRICE LIST SECTION
+    .price-list {
+      height: 100vh;
+      background: #438045;
+      color: $secondColor;
+      h2 {
+        font-weight: 700;
+        font-size: 5rem;
+        text-align: center;
+        letter-spacing: 2px;
+      }
+      p {
+        font-family: "Fira Sans", sans-serif;
+        font-weight: 300;
+        font-size: 1.8rem;
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+      }
+      .catalog-link-block,
+      .price-list-link-block { // ------------------- PRICE DOWNLOAD BUTTON
+        //padding: 30px;
+        @media screen and (max-width: 768px) {
+          transform: scale(.7);
+        }
+      }
+      a {
+        transition: .3s ease-out;
+        padding: 30px;
+        width: 350px;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        h3 {
+          margin: 0;
+        }
+        span {
+          margin: 15px 0;
+          font-family: "Fira Sans", sans-serif;
+          font-weight: 100;
+          font-size: 1.8rem;
+        }
+        svg {
+          display: block;
+          height: 200px;
+          transition: .5s ease;
+        }
+        &:hover {
+          color: inherit;
+          text-decoration: none;
+        }
+        &:hover svg {
+          transition: .5s ease;
+          transform: translate(0, -10px);
+        }
+        .download-elem1,
+        .download-elem2 {
+          transition: .5s ease-out;
+        }
+        &:hover .download-elem1,
+        &:hover .download-elem2 {
+          transform: translate(0, 30px);
+          transition: .5s ease;
+        }
+        &:focus {
+          color: inherit;
+          text-decoration: none;
+        }
+        &:hover img {
+          transform: scale(1.05);
+          transition: .3s ease-out;
+        }
+        img {
+          max-height: 250px;
+          transition: .3s ease-out;
+        }
+      }
+    }
+
+    // --------------------------------------- CONTACTS
+    .contacts {
+      height: 50vh;
+      background: $secondColor;
+      h2 {
+        font-weight: 700;
+        font-size: 5rem;
+        text-align: center;
+
+      }
+      .col-lg-6 {
+        margin: 30px 0;
+        font-family: "Fira Sans", sans-serif;
+
+        text-align: center;
+        a {
+          line-height: 40px;
+          font-size: 4rem;
+          font-weight: 300;
+          &:hover,
+          &:focus,
+          &:active {
+            color: inherit;
+            text-decoration: none;
+          }
+        }
+        svg {
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  // -------------------------------------
+  h2 {
+    text-align: center;
+  }
+  .our-work-section {
+    img {
+      width: 100%;
+    }
+    p {
+      text-align: center;
+      vertical-align: middle;
+      height: 50px;
+    }
+  }
+}
+
+
+
