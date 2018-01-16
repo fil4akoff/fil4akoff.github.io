@@ -427,6 +427,8 @@ body {
     body main .custom-news img {
       height: 100%;
       padding: 20px; }
+    body main .custom-news ul {
+      list-style: none; }
     body main .custom-news .copyright {
       width: 100%;
       text-align: right; }
@@ -454,11 +456,32 @@ body {
       @media screen and (max-width: 575px) {
         body main .main-local-news .local-news-card {
           margin: 15px; } }
-    body main .main-local-news .local-news-card-alert {
-      padding: 20px;
-      background: #19264e;
-      color: #fff;
-      border-radius: 10px; }
+    body main .main-local-news .modal-buttons-row {
+      text-align: right;
+      margin-bottom: 10px; }
+      body main .main-local-news .modal-buttons-row .help-button {
+        background: #ff4757;
+        border-color: transparent; }
+        body main .main-local-news .modal-buttons-row .help-button:hover {
+          cursor: pointer;
+          background: #ff1428; }
+        body main .main-local-news .modal-buttons-row .help-button:focus {
+          outline: none;
+          box-shadow: none; }
+        body main .main-local-news .modal-buttons-row .help-button:active {
+          box-shadow: none;
+          background: #19264e; }
+    body main .main-local-news .modal-content {
+      padding: 30px;
+      background: #fff url("../img/bg-logo.png") no-repeat bottom right;
+      background-size: 30%; }
+      body main .main-local-news .modal-content .local-news-top-alert-card {
+        font-size: .9rem;
+        border-radius: 10px; }
+        body main .main-local-news .modal-content .local-news-top-alert-card ol {
+          font-weight: 700; }
+          body main .main-local-news .modal-content .local-news-top-alert-card ol li {
+            font-weight: 400; }
     body main .main-news-ato h2 {
       margin: 30px auto; }
     body main .main-ask h2 {
@@ -504,8 +527,16 @@ body {
     body main .main-feedback h2 {
       margin: auto;
       margin-bottom: 50px; }
-    body main .main-feedback .feedback-card img {
-      max-width: 100%; }
+    body main .main-feedback .feedback-card {
+      border: 1px solid #ccc;
+      border-radius: 15px;
+      box-shadow: 0 0 5px #ccc;
+      margin-bottom: 30px;
+      padding: 15px 0; }
+      body main .main-feedback .feedback-card img {
+        border-radius: 10px;
+        margin: 15px 0;
+        max-width: 100%; }
     body main .vam-slovo {
       padding: 50px; }
       @media screen and (max-width: 575px) {
@@ -569,7 +600,11 @@ body {
       body main .main-partners .main-partners-section .main-partner-card {
         margin-bottom: 30px; }
         body main .main-partners .main-partners-section .main-partner-card img {
-          max-width: 100%; }
+          max-width: 100%;
+          transition: ease-in .3s; }
+          body main .main-partners .main-partners-section .main-partner-card img:hover {
+            transform: scale(0.98);
+            transition: ease-out .2s; }
   body footer {
     background: #19264e;
     color: #ffffff; }
